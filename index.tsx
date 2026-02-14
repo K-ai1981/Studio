@@ -7,6 +7,9 @@ if (!rootElement) {
   throw new Error("Could not find root element to mount to");
 }
 
+// Clear any existing HTML content (like loading spinners)
+rootElement.innerHTML = '';
+
 const root = ReactDOM.createRoot(rootElement);
 root.render(
   <React.StrictMode>
